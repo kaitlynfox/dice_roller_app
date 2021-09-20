@@ -14,8 +14,7 @@ class MainActivity : AppCompatActivity() {
         // (R.id.button) is the resource id for this specific button (unique identifier)
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener {
-            val toast = Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT)
-            toast.show()
+            Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT).show()
         }
     }
 }

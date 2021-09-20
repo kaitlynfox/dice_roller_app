@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
-import org.w3c.dom.Text
 
 // This class allows a user to roll a dice and display the result to the screen
 class MainActivity : AppCompatActivity() {
@@ -21,11 +19,20 @@ class MainActivity : AppCompatActivity() {
 
     // Rolls the dice and updates the screen with the result
     private fun rollDice() {
+        // First Dice Roll
         val dice = Dice(6)
         val diceRoll = dice.roll()
 
-        val resultTextView: TextView = findViewById(R.id.diceTextView)
-        resultTextView.text = diceRoll.toString()
+        // Second Dice Roll
+        val secondDice = Dice(20)
+        val secondDiceRoll = secondDice.roll()
+
+        // Update view with results from both dice rolls
+        val resultTextView1: TextView = findViewById(R.id.diceTextView1)
+        resultTextView1.text = diceRoll.toString()
+
+        val resultTextView2: TextView = findViewById(R.id.diceTextView2)
+        resultTextView2.text = secondDiceRoll.toString()
     }
 }
 
